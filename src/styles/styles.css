@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+  transition: 0.5s;
+}
+.content {
+  background-color: #a27dee;
+  padding: 100px 50px;
+  color: #09002f;
+}
+.content h2 {
+  font-size: 42px;
+}
+.section-Top {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  background: linear-gradient(to top, #a27dee, #09002f);
+  overflow: hidden;
+  pointer-events: none;
+}
+.section-Top::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #a27dee, transparent);
+  z-index: 100;
+}
+.section-Top img {
+  position: absolute;
+}
+#zaamin {
+  width: 100%;
+  bottom: 0;
+  z-index: 12;
+}
+#pyramid {
+  right: 0;
+  width: 50vw;
+  bottom: 80px;
+  z-index: 11;
+}
+#cover {
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+}
+#stone {
+  width: 100%;
+  right: 0;
+  bottom: 30px;
+  z-index: 9;
+}
+#bottom_cloud {
+  right: 220px;
+  bottom: 200px;
+}
+#right_cloud {
+  right: -180px;
+  top: 100px;
+}
+#left_cloud {
+  left: -70px;
+  top: 250px;
+  z-index: 4;
+}
+#moon {
+  top: 120px;
+  left: -80px;
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+#text {
+  left: 0;
+  mix-blend-mode: screen;
+}
+#stars {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #text {
+    left: -100px !important;
+  }
+}
+@media (max-width: 576px) {
+  #text {
+    left: -250px !important;
+    z-index: 10;
+  }
+}
+
+.section-Bottom{
+  margin: 12% 10%;
+  display: flex;
+  align-items: center;
+   font-family: "Arial Black", sans-serif;
+  color: #fff;
+  cursor: default;
+  justify-content: space-around;
+}
+
+.section-Bottom h2{
+  font-size: 2em;
+  margin: 0;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards 1.4s;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  transition: .5s;
+}
+
+.section-Bottom h3{
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: calc(.2s * var(--i))
+}
+
+.section-Bottom p{
+  font-size: 0.9em;
+  opacity: 0;
+  animation: slideTop 1s ease forwards 1.8s;
+}
+
+.section-Bottom img{
+  max-width: 300px;
+  max-height: 300px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards 2s;
+}
+
+.section-Bottom .img{
+  animation: animate 5s ease-in-out infinite 3s;
+}
+
+.section-Bottom span a{
+  color: #0ef;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.section-Bottom span a:hover{
+  text-shadow: 0 0 40px #fff;
+  color: white;
+}
+
+@keyframes slideTop{
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight{
+  from{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft{
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(50px);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
