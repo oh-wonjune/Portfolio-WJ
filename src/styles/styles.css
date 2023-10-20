@@ -149,6 +149,53 @@
   color: white;
 }
 
+.portfolio-placeholder{
+  height: 1000px;
+}
+
+.Portfolio-Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10% 0 10%;
+}
+
+.Portfolio-Header h1{
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  cursor: default;
+  font-size: 2.1em;
+  transition: 1s;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.Portfolio-Header h1:hover{
+  color: white;
+  text-shadow: 0 0 40px white;
+}
+
+.navbar a{
+  display: inline-block;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: .5s;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar .active{
+  color: #6bdcff;
+}
+
+.navbar a:hover{
+  text-shadow: 0 0 40px #9ee8ff;
+}
+
 @keyframes slideTop{
   from{
     transform: translateY(100px);
@@ -196,5 +243,17 @@
 
   100%{
     transform: translateY(0);
+  }
+}
+
+@keyframes slideBottom{
+  from{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

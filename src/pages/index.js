@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {Color, Polyline, Renderer, Transform, Vec3} from "ogl";
+import Portfolio from '../components/Portfolio/Portfolio'
 
 const vertex = `
             attribute vec3 position;
@@ -48,7 +49,7 @@ const vertex = `
         `;
 
 
-const ParallaxEffect = () => {
+const Container = () => {
   const zaaminRef = useRef(null);
   const pyramidRef = useRef(null);
   const stoneRef = useRef(null);
@@ -60,6 +61,7 @@ const ParallaxEffect = () => {
   const starsRef = useRef(null);
   const containerRef = useRef(null);
   const sectionRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const renderer = new Renderer({ dpr: 2 , alpha: true});
@@ -186,6 +188,12 @@ const ParallaxEffect = () => {
       if (responsive <= 576) {
         textRef.current.style.transform = `scale(0.5) translateY(${val}px)`;
       }
+
+      if (window.scrollY > window.innerHeight / 3) {
+        setIsVisible(true);
+      } else if(window.scrollY === 0){
+        setIsVisible(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -219,25 +227,16 @@ const ParallaxEffect = () => {
           <img src="/assets/wonjune_bedge.png" ref={textRef} id="text" style={{width:"900px"}}/>
           <img src="https://i.ibb.co/BZs8WZr/stars.png" ref={starsRef} id="stars"/>
       </section>
+
       <div className="content">
-        <section className={"section-Bottom"}>
-            <article>
-                <h3 style={{ '--i': 6 }}>Hello, I'm</h3>
-                <h2>Oh Wonjune</h2>
-                <h3 style={{ '--i': 8 }}>
-                    I'm a <span>
-                        <a href="https://fr.wikipedia.org/wiki/D%C3%A9veloppement_web_frontal" target="_blank" rel="noopener noreferrer" title="Wikipedia">Frontend developer</a>
-                    </span>
-                </h3>
-                <p>fdjhfdfhs fhdgbfhjsdbfksdjfbd shj fbhdjh vcdsjk fhndfbnd vfcjxh,hfgbxjfd vbvddh fgdfbd cfdsbvfbcds fchdsfhsjhdfhdvf hdgshfh</p>
-            </article>
-            <div className="img">
-                <img src="/assets/Image.png" alt="Profile" />
-            </div>
-        </section>
+        {isVisible ?
+        <Portfolio/>
+        :
+            <div className="portfolio-placeholder"></div>
+        }
       </div>
     </div>
   );
 };
 
-export default ParallaxEffect;
+export default Container;
