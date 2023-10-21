@@ -175,7 +175,7 @@
   text-shadow: 0 0 40px white;
 }
 
-.navbar a{
+.navbar button{
   display: inline-block;
   margin-left: 30px;
   text-decoration: none;
@@ -185,9 +185,11 @@
   opacity: 0;
   animation: slideBottom 1s ease forwards;
   animation-delay: calc(.2s * var(--i));
+  background: none;
+  border: none;
 }
 
-.navbar a:hover,
+.navbar button:hover,
 .navbar .active{
   color: #6bdcff;
 }
