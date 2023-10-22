@@ -109,7 +109,7 @@
   font-size: 2em;
   margin: 0;
   opacity: 0;
-  animation: slideLeft 1s ease forwards 1.4s;
+  animation: slideLeft 1s ease forwards 0.4s;
   -webkit-text-stroke: 2px white;
   color: transparent;
   transition: .5s;
@@ -117,21 +117,21 @@
 
 .section-Bottom h3{
   opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: calc(.2s * var(--i))
+  animation: slideRight 0.5s ease forwards;
+  animation-delay: calc(.1s * var(--i))
 }
 
 .section-Bottom p{
   font-size: 0.9em;
   opacity: 0;
-  animation: slideTop 1s ease forwards 1.8s;
+  animation: slideTop 1s ease forwards 0.8s;
 }
 
 .section-Bottom img{
   max-width: 300px;
   max-height: 300px;
   opacity: 0;
-  animation: slideTop 1s ease forwards 2s;
+  animation: slideTop 1s ease forwards 0.3s;
 }
 
 .section-Bottom .img{
@@ -259,3 +259,82 @@
     opacity: 1;
   }
 }
+
+
+.fake-magicwall{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.fake-magicwall ul{
+    list-style: none;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    flex-wrap: wrap;
+}
+.fake-magicwall ul li{
+    width: 161px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    display: list-item;
+}
+.fake-magicwall .magic-wall_item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.fake-magicwall img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fake-magicwall ul li:hover .magic-wall_item{
+    transform: scale(1.14);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.14);
+}
+.fake-magicwall ul li a.colorbox{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: all 150ms ease-out;
+    -o-transition: all 150ms ease-out;
+    -webkit-transition: all 150ms ease-out;
+    transform: scale(0.2);
+}
+.fake-magicwall ul li:hover a.colorbox{
+    transform: scale(0.6);
+    opacity: 1;
+}
+
+.fake-magicwall{
+        padding-left: 8.5rem;
+    }
+    .fake-magicwall ul li{
+        width: 242px;
+        height: 236px;
+    }
+
+
+    .text-zone3 p{
+    margin-bottom: 15px;
+    line-height: 1.5rem;
+}
+
+    .text-zone3 #header{
+        width: 500px;
+        font-size: 3rem;
+    }
+    .text-zone3 p{
+        width: 400px;
+    }

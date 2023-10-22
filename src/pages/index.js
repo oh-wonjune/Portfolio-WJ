@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {Color, Polyline, Renderer, Transform, Vec3} from "ogl";
 import Portfolio from '../components/Portfolio/Portfolio'
-
+import BottomSection from "../components/BottomSection/BottomSection";
 const vertex = `
             attribute vec3 position;
             attribute vec3 next;
@@ -230,7 +230,7 @@ const Container = () => {
 
       <div className="content">
         {isVisible ?
-        <Portfolio/>
+        <BottomSection/>
         :
             <div className="portfolio-placeholder"></div>
         }
