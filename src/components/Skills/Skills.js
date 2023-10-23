@@ -24,7 +24,7 @@ const Skills = () => {
 
 
     return (
-        <section className="section-Bottom" style={{margin:"10% 10%"}}>
+        <section className="section-Bottom" style={{margin:"10% 10% 6% 10%"}}>
             <section id="section-about">
                 <div className="text-zone3">
                     <div id="header">

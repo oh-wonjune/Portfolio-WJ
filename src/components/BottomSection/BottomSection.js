@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import Home from '../Home/Home'
 import Skills from "../Skills/Skills";
+import Contact from "../Contact/Contact";
 
 const BottomSection = () => {
     const [idx,setIdx] = useState(1)
@@ -57,7 +58,7 @@ const BottomSection = () => {
         <div ref={parentRef}>
             <header  className={isHeaderSticky ? 'sticky-Header' : 'Portfolio-Header'} style={{ width: headerWidth }} ref={headerRef}>
                 <h1>Portfolio.</h1>
-                <nav className="navbar">
+                <nav className="navbar" style={{display:"flex", alignItems:"center", marginTop:"20px"}}>
                     <button id="tab1" onClick={onClickHeader} className={idx ===1?"active": ""} style={{'--i': 1}}>Home</button>
                     <button id="tab2" onClick={onClickHeader} className={idx ===2?"active": ""} style={{'--i': 2}}>Portfolio</button>
                     <button id="tab3" onClick={onClickHeader} className={idx ===3?"active": ""} style={{'--i': 3}}>Skills</button>
@@ -70,6 +71,9 @@ const BottomSection = () => {
             }
             {idx === 3 &&
             <Skills/>
+            }
+            {idx === 4 &&
+            <Contact/>
             }
             </div>
         </div>

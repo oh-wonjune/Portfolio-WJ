@@ -226,6 +226,7 @@ const Container = () => {
           <img src="https://i.ibb.co/nCkhw23/right-cloud.png" ref={rightCloudRef} id="right_cloud"/>
           <img src="/assets/wonjune_bedge.png" ref={textRef} id="text" style={{width:"900px"}}/>
           <img src="https://i.ibb.co/BZs8WZr/stars.png" ref={starsRef} id="stars"/>
+
       </section>
 
       <div className="content">
