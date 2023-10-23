@@ -1,9 +1,19 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Home from '../Home/Home'
 import Skills from "../Skills/Skills";
 
 const BottomSection = () => {
     const [idx,setIdx] = useState(1)
+    const [isHeaderSticky, setIsHeaderSticky] = useState(false);
+
+    const headerRef = useRef(null);
+    const contentRef = useRef(null);
+    const parentRef = useRef(null);
+    const parentWidth = parentRef.current ? parentRef.current.offsetWidth : 'auto';
+    const marginPercent = 10; // 여기에 원래의 마진 퍼센트 값을 지정합니다.
+    const marginValue = (marginPercent / 100) * parentWidth;
+    const headerWidth = parentWidth - 2 * marginValue;
+
 
     const onClickHeader=(e)=>{
         switch(e.target.id){
@@ -19,27 +29,49 @@ const BottomSection = () => {
            case "tab4":
                 setIdx(4)
                 break;
-           case "tab5":
-                setIdx(5)
-                break;
         }
     }
 
+     useEffect(() => {
+    // 헤더의 초기 위치를 저장
+    const initialHeaderTop = headerRef.current.getBoundingClientRect().top + window.scrollY;
+
+    const handleScroll = () => {
+        // 현재 스크롤 위치
+        const currentScrollTop = window.scrollY;
+
+        if (currentScrollTop >= initialHeaderTop && !isHeaderSticky) {
+            setIsHeaderSticky(true);
+        } else if (currentScrollTop < initialHeaderTop && isHeaderSticky) {
+            setIsHeaderSticky(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, [isHeaderSticky]);
+
     return (
-        <div>
-            <header className="Portfolio-Header">
+        <div ref={parentRef}>
+            <header  className={isHeaderSticky ? 'sticky-Header' : 'Portfolio-Header'} style={{ width: headerWidth }} ref={headerRef}>
                 <h1>Portfolio.</h1>
                 <nav className="navbar">
                     <button id="tab1" onClick={onClickHeader} className={idx ===1?"active": ""} style={{'--i': 1}}>Home</button>
-                    <button id="tab2" onClick={onClickHeader} className={idx ===2?"active": ""} style={{'--i': 2}}>About</button>
-                    <button id="tab3" onClick={onClickHeader} className={idx ===3?"active": ""} style={{'--i': 3}}>Portfolio</button>
-                    <button id="tab4" onClick={onClickHeader} className={idx ===4?"active": ""} style={{'--i': 4}}>Skills</button>
-                    <button id="tab5" onClick={onClickHeader} className={idx ===5?"active": ""} style={{'--i': 5}}>Contact</button>
+                    <button id="tab2" onClick={onClickHeader} className={idx ===2?"active": ""} style={{'--i': 2}}>Portfolio</button>
+                    <button id="tab3" onClick={onClickHeader} className={idx ===3?"active": ""} style={{'--i': 3}}>Skills</button>
+                    <button id="tab4" onClick={onClickHeader} className={idx ===4?"active": ""} style={{'--i': 4}}>Contact</button>
                 </nav>
             </header>
-
-           <Home/>
-           <Skills/>
+            <div ref={contentRef} className={isHeaderSticky ? 'sticky-content' : ''}>
+            {idx ===1 &&
+                <Home/>
+            }
+            {idx === 3 &&
+            <Skills/>
+            }
+            </div>
         </div>
     );
 };
