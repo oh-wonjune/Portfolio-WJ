@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
     return (
-        <section className="section-Bottom">
+        <section className="section-Bottom" >
             <article>
                 <h3 style={{'--i': 6}}>Hello, I'm</h3>
                 <h2>Oh Wonjune</h2>
@@ -16,7 +16,7 @@ const Home = () => {
                 <p>- 한 번 시작한 일은 끝까지 완수를 해야 하는 성격 탓에 엉덩이가 무겁다는 말을 많이 듣습니다. </p>
             </article>
             <div className="img">
-                <img src="/assets/Image.png" alt="Profile"/>
+                <img src="/assets/Image.png" alt="Profile" className="profile-img"/>
             </div>
         </section>
     );

@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <section id="contact" className="section-Bottom" style={{margin: "10% 10% 6% 10%"}}>
+        <section id="contact" className="section-Bottom" style={{margin: "8% 10% 8% 10%"}}>
             <section id="contact">
                 <h2 style={{width: "500px", fontSize: "3rem"}}>Contact</h2>
                 <div className="contact-wrapper">
@@ -28,30 +28,47 @@ const Contact = () => {
                     {/* Left contact page */}
                     <div className="direct-contact-container">
                         <ul className="contact-list">
-                            <li className="list-item"><i className="fa fa-map-marker fa-2x"><span
-                                className="contact-text place">City, Seoul</span></i></li>
-                            <li className="list-item"><i className="fa fa-phone fa-2x"><span
-                                className="contact-text phone"><a href="tel:1-212-555-5555"
-                                                                  title="Give me a call">010-5287-1394</a></span></i>
+                            <li className="list-item">
+                                <i className="fa fa-map-marker fa-2x" style={{color:"#6C47D9"}}>
+                                    <span className="contact-text place" style={{color:"#0ef", fontWeight:"400"}}>City, Seoul</span>
+                                </i>
                             </li>
-                            <li className="list-item"><i className="fa fa-envelope fa-2x"><span
-                                className="contact-text gmail"><a href="mailto:#"
-                                                                  title="Send me an email">kbw0309@gmail.com</a></span></i>
+                            <li className="list-item">
+                                <i className="fa fa-phone fa-2x" style={{color:"#6C47D9"}}>
+                                    <span className="contact-text phone">
+                                        <a href="tel:1-212-555-5555" title="Give me a call">010-5287-1394</a>
+                                    </span>
+                                </i>
+                            </li>
+                            <li className="list-item">
+                                <i className="fa fa-envelope fa-2x" style={{color:"#6C47D9"}}>
+                                    <span className="contact-text gmail">
+                                        <a href="mailto:#" title="Send me an email">kbw0309@gmail.com</a>
+                                    </span>
+                                </i>
                             </li>
                         </ul>
                         <hr className="hr-line"/>
                         <ul className="social-media-list">
-                            <li><a href="#" target="_blank" className="contact-icon">
-                                <i className="fa fa-github" aria-hidden="true"/></a>
+                            <li>
+                                <a href="#" target="_blank" className="contact-icon">
+                                    <i className="fa fa-github" aria-hidden="true"/>
+                                </a>
                             </li>
-                            <li><a href="#" target="_blank" className="contact-icon">
-                                <i className="fa fa-codepen" aria-hidden="true"/></a>
+                            <li>
+                                <a href="#" target="_blank" className="contact-icon">
+                                    <i className="fa fa-reddit" aria-hidden="true"/>
+                                </a>
                             </li>
-                            <li><a href="#" target="_blank" className="contact-icon">
-                                <i className="fa fa-twitter" aria-hidden="true"/></a>
+                            <li>
+                                <a href="#" target="_blank" className="contact-icon">
+                                    <i className="fa fa-twitter" aria-hidden="true"/>
+                                </a>
                             </li>
-                            <li><a href="#" target="_blank" className="contact-icon">
-                                <i className="fa fa-instagram" aria-hidden="true"/></a>
+                            <li>
+                                <a href="#" target="_blank" className="contact-icon">
+                                    <i className="fa fa-instagram" aria-hidden="true"/>
+                                </a>
                             </li>
                         </ul>
                         <hr className="hr-line"/>

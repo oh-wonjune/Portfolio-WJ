@@ -62,6 +62,7 @@ const Container = () => {
   const containerRef = useRef(null);
   const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false);
+  const [idx,setIdx] = useState(1)
 
   useEffect(() => {
     const renderer = new Renderer({ dpr: 2 , alpha: true});
@@ -90,7 +91,7 @@ const Container = () => {
     //#0524D6
 
         //#98FCFB
-        //#6F5DF2
+        //#6F5DF265185244
     ["#98FCFB", "#6F5DF2"].forEach((color, i) => {
       const line = {
         spring: random(0.02, 0.1),
@@ -224,14 +225,17 @@ const Container = () => {
           <img src="https://i.ibb.co/NZmVvbJ/left-cloud.png" ref ={leftCloudRef} id="left_cloud"/>
           <img src="https://i.ibb.co/HF2byb0/moon.png" ref={moonRef} id="moon"/>
           <img src="https://i.ibb.co/nCkhw23/right-cloud.png" ref={rightCloudRef} id="right_cloud"/>
-          <img src="/assets/wonjune_bedge.png" ref={textRef} id="text" style={{width:"900px"}}/>
+          <img src="https://raw.githubusercontent.com/oh-wonjune/Portfolio-Contents/main/wonjune_bedge.png" ref={textRef} id="text" style={{width:"900px"}}/>
           <img src="https://i.ibb.co/BZs8WZr/stars.png" ref={starsRef} id="stars"/>
 
       </section>
 
       <div className="content">
         {isVisible ?
-        <BottomSection/>
+        <BottomSection
+            idx={idx}
+            setIdx={setIdx}
+        />
         :
             <div className="portfolio-placeholder"></div>
         }
