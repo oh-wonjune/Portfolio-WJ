@@ -6,26 +6,6 @@ const Contact = () => {
             <section id="contact">
                 <h2 style={{width: "500px", fontSize: "3rem"}}>Contact</h2>
                 <div className="contact-wrapper">
-                    {/* Left contact page */}
-                    <form id="contact-form" className="form-horizontal" role="form">
-                        <div className="form-group">
-                            <div className="col-sm-12">
-                                <input type="text" className="form-control" id="name" placeholder="NAME" name="name" required/>
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <div className="col-sm-12">
-                                <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" required/>
-                            </div>
-                        </div>
-                        <textarea className="form-control" rows={10} placeholder="MESSAGE" name="message" required defaultValue={""}/>
-                        <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                            <div className="alt-send-button">
-                                <i className="fa fa-paper-plane"/><span className="send-text">SEND</span>
-                            </div>
-                        </button>
-                    </form>
-                    {/* Left contact page */}
                     <div className="direct-contact-container">
                         <ul className="contact-list">
                             <li className="list-item">
@@ -49,28 +29,45 @@ const Contact = () => {
                             </li>
                         </ul>
                         <hr className="hr-line"/>
-                        <ul className="social-media-list">
-                            <li>
-                                <a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-github" aria-hidden="true"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-reddit" aria-hidden="true"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-twitter" aria-hidden="true"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-instagram" aria-hidden="true"/>
-                                </a>
-                            </li>
-                        </ul>
+                        {/*<ul className="social-media-list">*/}
+                        {/*    <li>*/}
+                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
+                        {/*            <i className="fa fa-github fa-2x" aria-hidden="true"/>*/}
+                        {/*        </a>*/}
+                        {/*    </li>*/}
+                        {/*    <li>*/}
+                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
+                        {/*            <i className="fa fa-reddit fa-2x" />*/}
+                        {/*        </a>*/}
+                        {/*    </li>*/}
+                        {/*    <li>*/}
+                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
+                        {/*            <i className="fa fa-twitter "/>*/}
+                        {/*        </a>*/}
+                        {/*    </li>*/}
+                        {/*    <li>*/}
+                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
+                        {/*            <i className="fa fa-instagram" aria-hidden="GitHub"/>*/}
+                        {/*        </a>*/}
+                        {/*    </li>*/}
+                        {/*</ul>*/}
+                        <div className="social-buttons">
+                            <a href="https://github.com/oh-wonjune" target="_blank" className="social-buttons__button social-button social-button--github" aria-label="GitHub">
+                                <span className="social-button__inner">
+                                    <i className="fab fa-github"/>
+                                </span>
+                            </a>
+                            <a href="https://www.instagram.com/learningatwebdev/" target="_blank" className="social-buttons__button social-button social-button--instagram" aria-label="InstaGram">
+                                <span className="social-button__inner">
+                                    <i className="fab fa-instagram"/>
+                                </span>
+                            </a>
+                            <a href="#" className="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+                                <span className="social-button__inner">
+                                    <i className="fab fa-linkedin-in"/>
+                                </span>
+                            </a>
+                        </div>
                         <hr className="hr-line"/>
                     </div>
                 </div>

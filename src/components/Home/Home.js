@@ -16,7 +16,7 @@ const Home = () => {
                 <p>- 한 번 시작한 일은 끝까지 완수를 해야 하는 성격 탓에 엉덩이가 무겁다는 말을 많이 듣습니다. </p>
             </article>
             <div className="img">
-                <img src="/assets/Image.png" alt="Profile" className="profile-img"/>
+                <img src="https://raw.githubusercontent.com/oh-wonjune/Portfolio-Contents/main/image-wj.png" alt="Profile" className="profile-img"/>
             </div>
         </section>
     );
