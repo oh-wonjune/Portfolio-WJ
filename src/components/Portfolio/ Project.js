@@ -33,11 +33,9 @@ const Project = (props) => {
                     <a href={repo} target="_blank" rel="noopener noreferrer" style={{fontSize:"17px"}}>
                         View source <i className="fas fa-external-link-alt" style={{fontSize:"12px"}}/>
                     </a>
-                    {!props.notTry &&
                     <a href={link} target="_blank" rel="noopener noreferrer" style={{fontSize:"17px"}}>
                         Try it Live <i className="fas fa-external-link-alt" style={{fontSize:"12px"}}/>
                     </a>
-                    }
                 </div>
             </div>
         </div>

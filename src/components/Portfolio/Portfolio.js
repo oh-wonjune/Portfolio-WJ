@@ -14,7 +14,6 @@ const Portfolio = () => {
                         tech="js css react"쟁
                         link="http://www.yourmentor.co.kr/entryPage"
                         repo="https://github.com/oh-wonjune/YourMentor"
-                        notTry={false}
                     >
                         <small>
                            Next.js, Styled-Components, Recoil, Amazon Linux2, PM2, Jenkins를 사용해 개발
@@ -27,9 +26,8 @@ const Portfolio = () => {
                         title="</> Code dev"
                         img={'https://raw.githubusercontent.com/oh-wonjune/Portfolio-Contents/main/Code_Dev.png'}
                         tech="js react css node"
-                        link="https://yagoestevez-stock-price-checker.glitch.me/"
+                        link="http://codedev.site/"
                         repo="https://github.com/oh-wonjune/CodeEditor-forWeb"
-                        notTry={true}
                     >
                         <small>
                             React, node.js, css를 사용해 개발
@@ -42,9 +40,8 @@ const Portfolio = () => {
                         title="Portfolio Wonjune"
                         img={'https://raw.githubusercontent.com/oh-wonjune/Portfolio-Contents/main/porfolio.png'}
                         tech="react css"
-                        link="https://yagoestevez-stock-price-checker.glitch.me/"
-                        repo="https://github.com/oh-wonjune/CodeEditor-forWeb"
-                        notTry={false}
+                        link="http://wonjune.me/"
+                        repo="https://github.com/oh-wonjune/Portfolio-WJ"
                     >
                         <small>
                             Next.js, React, css를 사용해 개발
