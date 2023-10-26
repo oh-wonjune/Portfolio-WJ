@@ -29,40 +29,18 @@ const Contact = () => {
                             </li>
                         </ul>
                         <hr className="hr-line"/>
-                        {/*<ul className="social-media-list">*/}
-                        {/*    <li>*/}
-                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
-                        {/*            <i className="fa fa-github fa-2x" aria-hidden="true"/>*/}
-                        {/*        </a>*/}
-                        {/*    </li>*/}
-                        {/*    <li>*/}
-                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
-                        {/*            <i className="fa fa-reddit fa-2x" />*/}
-                        {/*        </a>*/}
-                        {/*    </li>*/}
-                        {/*    <li>*/}
-                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
-                        {/*            <i className="fa fa-twitter "/>*/}
-                        {/*        </a>*/}
-                        {/*    </li>*/}
-                        {/*    <li>*/}
-                        {/*        <a href="#" target="_blank" className="contact-icon">*/}
-                        {/*            <i className="fa fa-instagram" aria-hidden="GitHub"/>*/}
-                        {/*        </a>*/}
-                        {/*    </li>*/}
-                        {/*</ul>*/}
                         <div className="social-buttons">
                             <a href="https://github.com/oh-wonjune" target="_blank" className="social-buttons__button social-button social-button--github" aria-label="GitHub">
                                 <span className="social-button__inner">
                                     <i className="fab fa-github"/>
                                 </span>
                             </a>
-                            <a href="https://www.instagram.com/learningatwebdev/" target="_blank" className="social-buttons__button social-button social-button--instagram" aria-label="InstaGram">
+                            <a href="https://www.instagram.com/kbw0309/" target="_blank" className="social-buttons__button social-button social-button--instagram" aria-label="InstaGram">
                                 <span className="social-button__inner">
                                     <i className="fab fa-instagram"/>
                                 </span>
                             </a>
-                            <a href="#" className="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/wonjune-oh-345193286/" target="_blank" className="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
                                 <span className="social-button__inner">
                                     <i className="fab fa-linkedin-in"/>
                                 </span>
