@@ -61,6 +61,7 @@ const Container = () => {
   const starsRef = useRef(null);
   const containerRef = useRef(null);
   const sectionRef = useRef(null)
+  const scrollRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false);
   const [idx,setIdx] = useState(1)
 
@@ -227,7 +228,12 @@ const Container = () => {
           <img src="https://i.ibb.co/nCkhw23/right-cloud.png" ref={rightCloudRef} id="right_cloud"/>
           <img src="https://raw.githubusercontent.com/oh-wonjune/Portfolio-Contents/main/wonjune_bedge.png" ref={textRef} id="text" style={{width:"900px"}}/>
           <img src="https://i.ibb.co/BZs8WZr/stars.png" ref={starsRef} id="stars"/>
-
+        <div className="container_mouse" ref={scrollRef} >
+          <span className="mouse-btn">
+            <span className="mouse-scroll"/>
+          </span>
+          <span style={{color:"#fffff826"}}>Scroll Down</span>
+        </div>
       </section>
 
       <div className="content">
