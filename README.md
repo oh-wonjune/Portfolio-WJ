@@ -21,7 +21,8 @@
 ---
 
 ## 프로젝트 스크린샷 🖼️
-![Uploading 스크린샷 2023-11-13 오후 2.47.16.png…]()
+
+<img width="1432" alt="스크린샷 2023-11-13 오후 2 47 16" src="https://github.com/oh-wonjune/Portfolio-WJ/assets/55135292/0d89151a-363b-418a-8355-990ca39e7406">
 
 ---
 
